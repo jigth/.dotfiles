@@ -1,0 +1,147 @@
+! ~~~~~ References ~~~~~
+! 1. https://www.x.org/releases/X11R6.7.0/doc/xterm.1.html
+! 2. https://jlk.fjfi.cvut.cz/arch/manpages/man/xterm.1
+! 3. https://wiki.archlinux.org/index.php/Xterm
+! 4. http://www.futurile.net/2016/06/14/xterm-setup-and-truetype-font-configuration/
+! 5. http://www.futurile.net/2016/06/15/xterm-256color-themes-molokai-terminal-theme/
+! 6. https://unix.stackexchange.com/questions/216723/xterm-or-xterm-in-configuration-file
+! 7. https://github.com/gotbletu/shownotes/blob/master/xterm_xresources.md
+
+!~~~~~~~~~~ Syntax specifics and XTerm vs xterm ~~~~~~~~~~~
+! In general Class names begin with capital letter whereas 
+! Instance names begin with lowercase one.
+! Therefore XTerm and xterm describe the same application but the capital
+! one describes the class (all cases of instances) whereas the lowrcase 
+! a particular instance of the class.
+! Two of the available application classes are XTerm and UXTerm.
+! In practice (daily usage) we would like all xterm instances to launch with
+! the same properties and therefore we can set the properties of XTerm class
+! instead of xterm instance. That''s why the XTerm is used below. 
+! X11 resources have a name which consists of a series of components 
+! separated by a dot or asterisk: 
+!    application.widget.property or application*widget.property
+! e.g. XTerm.vt100.geometry 
+! defines the geometry property of vt100 widget which belongs to XTerm class
+! the use of asterisk (*) wildcard as seperator makes the resource settings work 
+! for either the application or widget:
+! e.g. XTerm*vt100.geometry
+!~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+! Save this file as .Xresources in your home directory !
+
+! ## Enable a color supported XTerm ##
+XTerm.termName: xterm-256color
+
+! ## Set xterm window size ##
+XTerm*VT100.geometry: 130x50
+
+! ## Set alt to behave normally in combination with other keys and avoid weird symbols
+XTerm.VT100.eightBitInput: false
+
+! ## Set font and fontsize ##
+XTerm*faceName: DejaVu Sans Mono Regular
+XTerm*faceSize: 13
+
+! VT Font Menu: Unreadable
+XTerm*faceSize1: 8
+! VT Font Menu: Tiny
+XTerm*faceSize2: 10
+! VT Font Menu: Small
+XTerm*faceSize3: 12
+! VT Font Menu: Medium
+XTerm*faceSize4: 16
+! VT Font Menu: Large
+XTerm*faceSize5: 22
+! VT Font Menu: Huge
+XTerm*faceSize6: 24
+
+! ## Scrollbar ##
+XTerm*vt100.scrollBar: false
+
+! Do not scroll when there is new input
+XTerm*scrollTtyOutput: false
+
+! Scrolling by using Shift-PageUp / Shift-PageDown or mousewheel by default ##
+! Lines of output you can scroll back over
+XTerm*saveLines: 15000
+
+! Enable copy/paste hotkeyes (mouse highlight = copy ,  shift+Insert = paste)
+XTerm*selectToClipboard: true
+
+! ## Select text ##
+XTerm*highlightSelection: true
+! Remove trailing spaces
+XTerm*trimSelection: true
+
+! ## Keybindings ##
+XTerm*vt100.translations: #override \n\
+  Ctrl <Key>-: smaller-vt-font() \n\
+  Ctrl <Key>+: larger-vt-font() \n\
+  Ctrl <Key>0: set-vt-font(d) \n\
+  Ctrl Shift <Key>C: copy-selection(CLIPBOARD) \n\
+  Ctrl Shift <Key>V: insert-selection(CLIPBOARD)
+
+! ------------------------- !
+!   Nice base Theme (dark)  !
+! ------------------------- !
+
+!XTerm*background:  #000000
+!XTerm*foreground:  #9f9f9f
+!XTerm*color0:      #000000
+!XTerm*color1:      #9e1828
+!XTerm*color2:      #aece92
+!XTerm*color3:      #968a38
+!XTerm*color4:      #414171
+!XTerm*color5:      #963c59
+!XTerm*color6:      #418179
+!XTerm*color7:      #bebebe
+!XTerm*color8:      #666666
+!XTerm*color9:      #cf6171
+!XTerm*color10:     #c5f779
+!XTerm*color11:     #fff796
+!XTerm*color12:     #4186be
+!XTerm*color13:     #cf9ebe
+!XTerm*color14:     #71bebe
+!XTerm*color15:     #ffffff
+
+
+! ------------------ !
+! My Custom Theme    !
+! ------------------ !
+
+! -- Experimental background colors -- !
+
+! --- 'Alacritty black' --- !
+XTerm*background:  #1d1f21
+
+! --- Green --- !
+! XTerm*background:  #264653
+
+!  -- End experimental bg colors    -- !
+
+! XTerm*background:  #000000
+XTerm*foreground:  #9f9f9f
+XTerm*color0:      #000000
+XTerm*color1:      #9e1828
+XTerm*color2:      #aece92
+XTerm*color3:      #968a38
+XTerm*color4:      #414171
+XTerm*color5:      #963c59
+XTerm*color6:      #418179
+XTerm*color7:      #bebebe
+XTerm*color8:      #666666
+XTerm*color9:      #cf6171
+XTerm*color10:     #c5f779
+XTerm*color11:     #fff796
+
+! Blue (color of directories)
+!XTerm*color12:     #4186be
+XTerm*color12:     #81a2be
+
+XTerm*color13:     #cf9ebe
+XTerm*color14:     #71bebe
+XTerm*color15:     #ffffff
+
+
+! Weechat config
+XTerm*metaSendsEscape: true
