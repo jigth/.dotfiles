@@ -51,3 +51,6 @@ set termguicolors
 " Intellisense autocompletion menu options
 set completeopt=menuone,noinsert,noselect
 
+" language providers
+let g:python3_host_prog = '/usr/bin/python3'
+

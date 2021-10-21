@@ -1,6 +1,3 @@
-" Disable ALE LSP completition to avoid conflicts with coc.nvim
-"let g:ale_disable_lsp = 1
-
 call plug#begin(stdpath('data') . '/plugged')
 " Theme Plugins
 Plug 'morhetz/gruvbox'
@@ -39,6 +36,9 @@ Plug 'tpope/vim-repeat'
 Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 Plug 'AndrewRadev/tagalong.vim'
 Plug 'jparise/vim-graphql'
+Plug 'alvan/vim-closetag'
+Plug 'jiangmiao/auto-pairs'
+Plug 'neoclide/coc-pairs'
 
 " Text reading productivity plugins
 Plug 'HerringtonDarkholme/yats.vim'
@@ -55,7 +55,7 @@ Plug 'leafOfTree/vim-vue-plugin'
 
 " User Experience Plugins (work more comfortable)
 Plug 'norcalli/nvim-colorizer.lua'
-Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
+Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && npm install'  }
 
 "" Open media files in Telescope (requires Telescope plugin)
 Plug 'nvim-lua/popup.nvim'

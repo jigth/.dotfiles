@@ -2,6 +2,8 @@
 let mapleader=" "
 nnoremap <leader>w :w<CR>
 nnoremap <leader>q :q<CR>
+""Deactivate Exmode (which always open itself by accident :p)
+nnoremap Q <Nop>
 
 ""Folding
 nnoremap <leader>u zR
