@@ -42,8 +42,9 @@ set backupcopy=yes  " Allows parcel to do live reload in VIM
 let g:netrw_dirhistmax=0 " Avoid creating .netrwhist history file
 
 "" Syntax Highlighting
-au BufNewFile,BufRead *.ejs set filetype=html
-au! BufNewFile,BufRead *.svelte set ft=html
+autocmd BufNewFile,BufRead *.env* set syntax=sh
+autocmd BufNewFile,BufRead *.ejs set filetype=html
+autocmd! BufNewFile,BufRead *.svelte set ft=html
 
 " Allow nvim-colorizer to work properly
 set termguicolors
