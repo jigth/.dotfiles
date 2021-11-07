@@ -41,11 +41,8 @@ Plug 'nvim-treesitter/playground'
 
 " Snippets
 Plug 'honza/vim-snippets'
-
-"" ULTISNIPS
 Plug 'SirVer/ultisnips'
 Plug 'quangnguyen30192/cmp-nvim-ultisnips'
-
 
 " Text editing productivity plugins 
 Plug 'tpope/vim-surround'

@@ -32,6 +32,7 @@ set guicursor=
 set numberwidth=1
 
 "" Miscelanea
+set nocompatible
 set exrc  " Allow custom .vimrc per directory to execute different projects with different vim configs
 set ignorecase
 "set clipboard^=unnamed,unnamedplus "NOTE: Uncomment to share clipboard between
@@ -55,3 +56,6 @@ set completeopt=menuone,noinsert,noselect
 
 " language providers
 let g:python3_host_prog = '/usr/bin/python3'
+
+" Recognize languages
+let g:tex_flavor = "latex"
