@@ -2,6 +2,25 @@
 let mapleader=" "
 nnoremap <leader>w :w<CR>
 nnoremap <leader>q :q<CR>
+
+"" Copy paste facilities (need knowing a little about VIM REGISTERS to use)
+""" Copy paste from the clipboard in Linux (for Windows systems use the
+""" remaps that has '*' instead of '+')
+
+" Using the '+' register
+nnoremap <leader>y "+y
+nnoremap <leader>p "+p
+vnoremap <leader>y "+y
+vnoremap <leader>p "+p
+
+" Using the '*' register
+vnoremap <leader><leader>y "*y
+vnoremap <leader><leader>p "*p
+nnoremap <leader><leader>y "*y
+nnoremap <leader><leader>p "*p
+
+
+
 ""Deactivate Exmode (which always open itself by accident :p)
 nnoremap Q <Nop>
 

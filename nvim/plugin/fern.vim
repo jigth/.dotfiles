@@ -21,7 +21,7 @@ endfunction
 " Custom settings and mappings.
 let g:fern#disable_default_mappings = 1
 
-noremap <silent> <Leader>n :Fern . -drawer -reveal=% -toggle -width=35<CR><C-w>=
+noremap <silent> <Leader>e :Fern . -drawer -reveal=% -toggle -width=35<CR><C-w>=
 
 function! FernInit() abort
   nmap <buffer><expr>

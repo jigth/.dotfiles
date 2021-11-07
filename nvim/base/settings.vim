@@ -34,7 +34,8 @@ set numberwidth=1
 "" Miscelanea
 set exrc  " Allow custom .vimrc per directory to execute different projects with different vim configs
 set ignorecase
-set clipboard^=unnamed,unnamedplus
+"set clipboard^=unnamed,unnamedplus "NOTE: Uncomment to share clipboard between
+                                    "Neovim and the system (like VSCode and most text editors do!)
 set noerrorbells
 set encoding=utf-8
 set updatetime=300  " Less delays in some actions
@@ -54,4 +55,3 @@ set completeopt=menuone,noinsert,noselect
 
 " language providers
 let g:python3_host_prog = '/usr/bin/python3'
-

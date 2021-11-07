@@ -4,7 +4,6 @@ Plug 'morhetz/gruvbox'
 
 " Navigation
 Plug 'kyazdani42/nvim-web-devicons' " for file icons
-"Plug 'kyazdani42/nvim-tree.lua'
 Plug 'lambdalisue/fern.vim'
 Plug 'antoinemadec/FixCursorHold.nvim'
 Plug 'christoomey/vim-tmux-navigator'
@@ -21,16 +20,34 @@ Plug 'stsewd/fzf-checkout.vim'
 Plug 'nvim-lua/popup.nvim'
 Plug 'nvim-lua/plenary.nvim'
 
-" Autocompletion (LSP Support for VIM and NVIM)
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
+" Emmet
+Plug 'mattn/emmet-vim'
+
+" Linting
+Plug 'dense-analysis/ale'
+
+" Autocompletion (LSP)
+Plug 'neovim/nvim-lspconfig'
+Plug 'hrsh7th/cmp-nvim-lsp'
+Plug 'hrsh7th/cmp-buffer'
+Plug 'hrsh7th/cmp-path'
+Plug 'hrsh7th/cmp-cmdline'
+Plug 'hrsh7th/nvim-cmp'
+Plug 'onsails/lspkind-nvim'
 
 " Neovim Tree Sitter 
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'nvim-treesitter/playground'
 
-" Text editing productivity plugins 
+" Snippets
 Plug 'honza/vim-snippets'
-Plug 'mattn/emmet-vim'
+
+"" ULTISNIPS
+Plug 'SirVer/ultisnips'
+Plug 'quangnguyen30192/cmp-nvim-ultisnips'
+
+
+" Text editing productivity plugins 
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-repeat'
 Plug 'mg979/vim-visual-multi', {'branch': 'master'}
@@ -38,17 +55,15 @@ Plug 'AndrewRadev/tagalong.vim'
 Plug 'jparise/vim-graphql'
 Plug 'alvan/vim-closetag'
 Plug 'jiangmiao/auto-pairs'
-Plug 'neoclide/coc-pairs'
 
 " Text reading productivity plugins
-Plug 'HerringtonDarkholme/yats.vim'
 Plug 'majutsushi/tagbar'
 Plug 'maxmellon/vim-jsx-pretty'
 Plug 'metakirby5/codi.vim'
 
 " Formating
 Plug 'fatih/vim-go'
-Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
+Plug 'sbdchd/neoformat'
 
 " VueJS
 Plug 'leafOfTree/vim-vue-plugin'
