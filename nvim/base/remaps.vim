@@ -9,14 +9,20 @@ nnoremap <leader>q :q<CR>
 " Runtime Path Magic!
 "" Update the vim runtime path using the path of the current file (to search
 "" and edit files only within that directory, avoid doing 'cd' manually)
-nnoremap <F7> :cd %:h<CR>
+nnoremap <leader>cd :cd %:h<CR>
 "" Come back to the previous runtime path used by vim
 nnoremap <F8> :cd -<CR>
 
+" Vim :term key mappings
+"" Exits insert mode (when using :term) with ESC key (or Control-C) pressed twice
+tnoremap <ESC><ESC> <C-\><C-N>
+tnoremap <C-c><C-c> <C-\><C-N>
 
-" Toggle mouse on and off (VIM). 
-" NOTE: Use 'set mouse=a' or 'set mouse='nvi' if you want also support in
-" insert mode
+
+
+" F<x> mappings (Functions mappings)
+
+"" Toggle mouse on and off (VIM). 
 map <F3> <ESC>:exec &mouse!=""? "set mouse=" : "set mouse=nv"<CR>
 
 

@@ -14,12 +14,8 @@ capabilities.textDocument.completion.completionItem.resolveSupport = {
 
 require'lspconfig'.tsserver.setup{
     capabilities = capabilities,
-    autostart = false,
     filetypes = { "typescript", "typescriptreact", "typescript.tsx" },
     root_dir = function() return vim.loop.cwd() end      -- run lsp for javascript in any directory
 }
 
-require'lspconfig'.graphql.setup{
-    capabilities = capabilities,
-    autostart = false,
-}
+require'lspconfig'.graphql.setup{ }

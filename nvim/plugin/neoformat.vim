@@ -1,1 +1,1 @@
-nnoremap <leader><leader>f :Neoformat<CR>
+nnoremap <F7> :Neoformat<CR>

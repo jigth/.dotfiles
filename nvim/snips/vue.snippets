@@ -26,9 +26,7 @@
 
 snippet vbase3js "Javascript SFC Vue3 Snippet" b
 <template>
-	<div>
-		${2}
-	</div>
+	${2}
 </template>
 
 <script setup>
@@ -42,9 +40,7 @@ endsnippet
 
 snippet vbase3 "Typescript SFC Vue3 Snippet" b
 <template>
-	<div>
-		${2}
-	</div>
+	${2}
 </template>
 
 <script setup lang="ts">
@@ -63,4 +59,20 @@ endsnippet
 
 snippet impd "Import (DEFAULT) a component or library" b
 import $1 from '$2' 
+endsnippet
+
+
+snippet v3_setup "Create Vue 3 composition API component" b
+import { defineComponent } from 'vue'
+
+export default defineComponent({
+	name: '$1',
+
+	components: {
+	},
+
+	setup(props) {
+		$2
+	},
+})
 endsnippet

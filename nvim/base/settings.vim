@@ -6,7 +6,7 @@ set smartindent
 
 " Mouse support (Except on insert mode because its uncomfortable on laptops)
 " Use 'set mouse=a' to activate the mouse in all modes
-set mouse=nv
+" set mouse=nv
 
 " Line numbers
 set relativenumber
@@ -29,7 +29,7 @@ set undofile
 
 " Screen settings
 set nowrap
-set colorcolumn=80
+"set colorcolumn=80 " Visual column at the caracter 80
 set signcolumn=yes  " Helper column for status messages
 set cmdheight=2  " A little bit more space to show commands' responses
 set guicursor=
@@ -37,7 +37,8 @@ set numberwidth=1
 
 " Miscelanea
 set nocompatible
-set exrc  " Allow custom .vimrc per directory to execute different projects with different vim configs
+set exrc  " Allow custom .vimrc / .nvimrc per directory to execute different projects with different vim configs
+set secure  " Disallow 'autocmd' in local .vimrc / .nvimrc files
 set ignorecase
 "set clipboard^=unnamed,unnamedplus "NOTE: Uncomment to share clipboard between
                                     "Neovim and the system (like VSCode and most text editors do!)
@@ -46,11 +47,6 @@ set encoding=utf-8
 set updatetime=300  " Less delays in some actions
 set backupcopy=yes  " Allows parcel to do live reload in VIM
 let g:netrw_dirhistmax=0 " Avoid creating .netrwhist history file
-
-" Syntax Highlighting
-autocmd BufNewFile,BufRead *.env* set syntax=sh
-autocmd BufNewFile,BufRead *.ejs set filetype=html
-autocmd! BufNewFile,BufRead *.svelte set ft=html
 
 " Allow nvim-colorizer to work properly
 set termguicolors
@@ -63,3 +59,20 @@ let g:python3_host_prog = '/usr/bin/python3'
 
 " Recognize languages
 let g:tex_flavor = "latex"
+
+" Autocommands
+"" Syntax Highlighting
+autocmd BufNewFile,BufRead *.env* set syntax=sh
+autocmd BufNewFile,BufRead *.ejs set filetype=html
+autocmd! BufNewFile,BufRead *.svelte set ft=html
+autocmd! BufNewFile,BufRead *.njk set ft=jinja "" Requires the PLUGIN 'glench/vim-jinja2-syntax'
+
+"" Changes the window-local current directory to be the same as the directory of the current file
+autocmd VimEnter * silent! lcd %:p:h
+
+"" Autosave
+autocmd CursorHoldI,CursorHold <buffer> silent :wall
+
+
+" Filetypes
+filetype plugin on
