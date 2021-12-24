@@ -36,8 +36,9 @@ Plug 'airblade/vim-gitgutter'
 Plug 'mattn/emmet-vim'
 
 
-" Linting
-Plug 'dense-analysis/ale'
+" Linting (Currently, LSP Config provides linting, this can be used as
+" fallback if desired)
+"Plug 'dense-analysis/ale'
 
 
 " LSP Neovim

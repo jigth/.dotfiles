@@ -70,3 +70,7 @@ nnoremap <leader>; bi<<ESC>ea /><ESC>
 
 " Open new terminal in split windows (for executing some commands FASST)
 nnoremap <leader>t <C-w>v<c-w>l:term<CR>i
+
+" Map jj to Escape key, pressing jj twice very fast in insert mode will go to
+" normal mode
+imap jj <esc>
