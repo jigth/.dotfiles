@@ -1,9 +1,10 @@
 -- Typescript, Javascript related languages and frameworks
 
-
 -- SNIPPETS SUPPORT
 local capabilities = vim.lsp.protocol.make_client_capabilities()
+
 capabilities.textDocument.completion.completionItem.snippetSupport = true
+
 capabilities.textDocument.completion.completionItem.resolveSupport = {
     properties = {
         'documentation',
@@ -18,4 +19,6 @@ require'lspconfig'.tsserver.setup{
     root_dir = function() return vim.loop.cwd() end      -- run lsp for javascript in any directory
 }
 
-require'lspconfig'.graphql.setup{ }
+require'lspconfig'.graphql.setup{
+    capabilities = capabilities,
+}

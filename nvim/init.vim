@@ -6,4 +6,4 @@ source ~/.config/nvim/plugin/plugins.vim
 source ~/.config/nvim/themes/gruvbox-material.vim
 
 "" Lua Config
-luafile ~/.config/nvim/lua_files/telescope.lua
+luafile ~/.config/nvim/lua/jigth/init.lua
