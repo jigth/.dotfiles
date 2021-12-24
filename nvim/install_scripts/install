@@ -1,0 +1,33 @@
+#!/usr/bin/env sh
+
+function show_welcome_message() {
+    echo " ___           _        _ _ _                   "
+    echo "|_ _|_ __  ___| |_ __ _| | (_)_ __   __ _       "
+    echo " | || '_ \/ __| __/ _\` | | | | '_ \ / _\` |      "
+    echo " | || | | \__ \ || (_| | | | | | | | (_| |_ _ _ "
+    echo "|___|_| |_|___/\__\__,_|_|_|_|_| |_|\__, (_|_|_)"
+    echo "                                    |___/       "
+}
+
+function show_goodbye_message() {
+    echo "    _    _ _      ____                          ____  "
+    echo "   / \  | | |    |  _ \  ___  _ __   ___      _|  _ \ "
+    echo "  / _ \ | | |    | | | |/ _ \| '_ \ / _ \    (_) | | |"
+    echo " / ___ \| | |    | |_| | (_) | | | |  __/     _| |_| |"
+    echo "/_/   \_\_|_|    |____/ \___/|_| |_|\___|    (_)____/ "
+}
+                                                    
+function install() {
+
+    show_welcome_message
+
+    echo "> External Dependencies for this Neovim configuration (language servers, programs, etc) will be installed"
+    echo "> Starting to install them" $'\n'
+    ./install-language-servers.sh
+    ./install-plugin-dependencies.sh
+    echo "> Congratulations, all done!!" $'\n'
+
+    show_goodbye_message
+}
+
+install
