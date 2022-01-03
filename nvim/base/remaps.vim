@@ -13,6 +13,12 @@ nnoremap <leader>cd :cd %:h<CR>
 "" Come back to the previous runtime path used by vim
 nnoremap <F8> :cd -<CR>
 
+" Easy movements between windows
+nnoremap <c-h> <c-w>h
+nnoremap <c-j> <c-w>j
+nnoremap <c-k> <c-w>k
+nnoremap <c-l> <c-w>l
+
 " Vim :term key mappings
 "" Exits insert mode (when using :term) with ESC key (or Control-C) pressed twice
 tnoremap <ESC><ESC> <C-\><C-N>
