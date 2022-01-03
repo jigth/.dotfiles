@@ -2,6 +2,8 @@
 "      \ 'colorscheme': 'one',
 "      \ 'colorscheme': 'gruvbox',
 
+set noshowmode
+
 let g:lightline = {
       \ 'colorscheme': 'one',
       \ 'active': {
