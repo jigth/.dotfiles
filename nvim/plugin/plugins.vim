@@ -1,17 +1,37 @@
 call plug#begin(stdpath('data') . '/plugged')
 
 " Themes
-Plug 'sainnhe/gruvbox-material'
+"" Hight Contrast, Bright colors (Good when environment light is high)
+""" Nice ones
+Plug 'sainnhe/sonokai' " I like this one *A LOT*, but lacks some syntax coloring in JSON objects
+Plug 'kaicataldo/material.vim' " Bright code, light colored commentaries, better syntax colors for JSON objects than 'sonokai'
+
+""" Not bad
+Plug 'drewtempelmeyer/palenight.vim' " Good enough, But I like the 'sonokai' and 'material' a bit more
+Plug 'dracula/vim' " Very bright contrast except for comments
+
+"" Medium contrast (Good with more moderate environment light)
+""" Nice ones
+Plug 'sainnhe/edge' " Like the good 'sonokai' theme, but the non-commented code is a bit less bright
+Plug 'rakr/vim-one'
+
+""" Light colored commentaries
 Plug 'ghifarit53/tokyonight-vim'
-Plug 'kaicataldo/material.vim'
 Plug 'joshdick/onedark.vim'
-Plug 'drewtempelmeyer/palenight.vim'
-Plug 'kabbamine/yowish.vim'
 Plug 'ayu-theme/ayu-vim' " Miriage variant is good
-Plug 'dracula/vim'
-Plug 'morhetz/gruvbox' 
-Plug 'tomasiser/vim-code-dark' " Similar to VSCode, mostly used to follow VSCode tutorials seamlessly
+Plug 'kabbamine/yowish.vim'
 Plug 'preservim/vim-colors-pencil' " Nice light variation (when using background=light)
+
+""" Medium contrast but some annoying bright colors
+Plug 'morhetz/gruvbox' " Annoying GREEN and red
+
+""" Very visible comments (annoying, maybe useful for a specific use case)
+Plug 'tomasiser/vim-code-dark' " Similar to VSCode, mostly used to follow VSCode tutorials seamlessly
+
+"" Low contrast (Maybe best for low light environments)
+""" Nice ones
+Plug 'sainnhe/gruvbox-material'
+
 
 
 " Navigation
@@ -43,7 +63,7 @@ Plug 'itchyny/lightline.vim'
 Plug 'shinchu/lightline-gruvbox.vim'
 
 
-" Git
+" Git Integration
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
 
@@ -52,7 +72,7 @@ Plug 'airblade/vim-gitgutter'
 Plug 'mattn/emmet-vim'
 
 
-" Linting (Currently, LSP Config provides linting, this can be used as
+" Linting (Currently, 'LSP Config' and/or 'CoC Nvim' provides linting, this can be used as
 " fallback if desired)
 "Plug 'dense-analysis/ale'
 
@@ -60,8 +80,11 @@ Plug 'mattn/emmet-vim'
 " LSP Neovim
 
 "" Basic config
-Plug 'neovim/nvim-lspconfig'
+"Plug 'neovim/nvim-lspconfig'
 Plug 'glepnir/lspsaga.nvim'
+
+"" CoC autocompletion
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 "" cmp nvim (autocompletition)
 Plug 'hrsh7th/cmp-nvim-lsp'
@@ -90,6 +113,8 @@ Plug 'othree/yajs.vim' " Better JavaScript highlighting
 Plug 'HerringtonDarkholme/yats.vim' " Better TypeScript highlighting (especially the JSX markup)
 Plug 'jparise/vim-graphql'
 Plug 'maxmellon/vim-jsx-pretty'
+Plug 'hashivim/vim-terraform'
+
 
 " Snippets
 Plug 'honza/vim-snippets'
@@ -113,6 +138,10 @@ Plug 'alvan/vim-closetag'
 Plug 'vim-test/vim-test'
 
 
+" Debugging
+Plug 'puremourning/vimspector'
+Plug 'mfussenegger/nvim-dap'
+
 " Formating
 Plug 'fatih/vim-go'
 Plug 'sbdchd/neoformat'
@@ -125,6 +154,9 @@ Plug 'leafOfTree/vim-vue-plugin'
 
 
 " Better developer Experience
+
+"" Maximize Toggle windows (specially useful for debugging)
+Plug 'szw/vim-maximizer'
 
 "" Highlight colors like #123 from the terminal window
 Plug 'norcalli/nvim-colorizer.lua'

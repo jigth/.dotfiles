@@ -21,4 +21,5 @@ require'lspconfig'.tsserver.setup{
 
 require'lspconfig'.graphql.setup{
     capabilities = capabilities,
+    autostart = false,
 }

@@ -2,13 +2,15 @@
 -- Setup nvim-cmp.
 local cmp = require'cmp'
 
+-- Disabled some sections temporary due to using CoC instead 
+-- (Only left VIM command line autocompletion and some mappings, they're really great)
 cmp.setup({
-  snippet = {
-    -- REQUIRED - you must specify a snippet engine
-    expand = function(args)
-      vim.fn["UltiSnips#Anon"](args.body) -- For `ultisnips` users.
-    end,
-  },
+  -- snippet = {
+  --   -- REQUIRED - you must specify a snippet engine
+  --   expand = function(args)
+  --     vim.fn["UltiSnips#Anon"](args.body) -- For `ultisnips` users.
+  --   end,
+  -- },
   mapping = {
     ['<C-d>'] = cmp.mapping(cmp.mapping.scroll_docs(-4), { 'i', 'c' }),
     ['<C-f>'] = cmp.mapping(cmp.mapping.scroll_docs(4), { 'i', 'c' }),
@@ -21,11 +23,12 @@ cmp.setup({
     ['<CR>'] = cmp.mapping.confirm({ select = true }),
   },
   sources = cmp.config.sources({
-      { name = 'nvim_lsp' },
-      { name = 'ultisnips' }, -- For ultisnips users.
-      { name = 'path' }
+      -- Disabled temporary due to using CoC instead
+      -- { name = 'nvim_lsp' },
+      --{ name = 'ultisnips' }, -- For ultisnips users.
+      --{ name = 'path' }
     }, {
-      { name = 'buffer' },
+      --{ name = 'buffer' },
     }
   )
 })
@@ -47,19 +50,5 @@ cmp.setup.cmdline(':', {
 })
 
 
-
+-- Setup all language servers from this Lua Module
 require('jigth.lsp.setup-lsp')
--- Setup lspconfig.
--- local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
--- 
--- require('lspconfig')['tsserver'].setup {
---   capabilities = capabilities;
--- }
--- 
--- require('lspconfig')['html'].setup {
---   capabilities = capabilities;
--- }
--- 
--- require('lspconfig')['volar'].setup {
---   capabilities = capabilities;
--- }
