@@ -66,8 +66,8 @@ set autoindent
 
 
 " Mouse support (Except on insert mode because its uncomfortable on laptops)
-" Use 'set mouse=a' to activate the mouse in all modes
-" set mouse=nv
+set mouse=nv
+" Use 'set mouse=a' instead to activate the mouse in all modes
 
 
 " Line numbers

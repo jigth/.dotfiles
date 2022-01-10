@@ -1,6 +1,9 @@
 " First of all Deactivate the pesky Exmode (which always open itself by accident :p)
 nnoremap Q <Nop>
 
+" Unmap F1, equivalent to calling :h by default
+map <F1> <nop>
+
 " Basic remaps
 let mapleader=" "
 nnoremap <leader>w :w<CR>
