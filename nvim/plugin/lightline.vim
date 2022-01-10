@@ -1,4 +1,5 @@
 " Great colorschemes (replace below)
+"      \ 'colorscheme': 'sonokai',
 "      \ 'colorscheme': 'one',
 "      \ 'colorscheme': 'gruvbox',
 
