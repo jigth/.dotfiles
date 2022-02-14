@@ -81,20 +81,20 @@ Plug 'mattn/emmet-vim'
 
 "" Basic config
 "Plug 'neovim/nvim-lspconfig'
-Plug 'glepnir/lspsaga.nvim'
+"Plug 'glepnir/lspsaga.nvim'
 
 "" CoC autocompletion
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 "" cmp nvim (autocompletition)
-Plug 'hrsh7th/cmp-nvim-lsp'
-Plug 'hrsh7th/cmp-buffer'
+"Plug 'hrsh7th/cmp-nvim-lsp'
+"Plug 'hrsh7th/cmp-buffer'
 Plug 'hrsh7th/cmp-path'
 Plug 'hrsh7th/cmp-cmdline'
 Plug 'hrsh7th/nvim-cmp'
 
-"" Pretty icons
-Plug 'onsails/lspkind-nvim'
+"" Pretty icons (for LSP)
+"Plug 'onsails/lspkind-nvim'
 
 
 " Text reading productivity
@@ -111,7 +111,7 @@ Plug 'nvim-treesitter/playground'
 Plug 'glench/vim-jinja2-syntax' " Jinja and Nunjucks syntax highlighting
 Plug 'othree/yajs.vim' " Better JavaScript highlighting
 Plug 'HerringtonDarkholme/yats.vim' " Better TypeScript highlighting (especially the JSX markup)
-Plug 'jparise/vim-graphql'
+" Plug 'jparise/vim-graphql'
 Plug 'maxmellon/vim-jsx-pretty'
 Plug 'hashivim/vim-terraform'
 
@@ -131,7 +131,7 @@ Plug 'tpope/vim-abolish' " Better substitution, abbreviation and text-changing o
 Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 Plug 'AndrewRadev/tagalong.vim'
 Plug 'alvan/vim-closetag'
-"Plug 'mbbill/undotree' " Improved undo and reto (like Git but without the need of a repo)
+"Plug 'mbbill/undotree' " Improved undo and redo (like Git but without the need of a repo)
 
 
 " Testing
@@ -144,14 +144,9 @@ Plug 'mfussenegger/nvim-dap'
 
 " Formating
 Plug 'fatih/vim-go'
-Plug 'sbdchd/neoformat'
+"Plug 'sbdchd/neoformat'
 Plug 'prettier/vim-prettier'
 Plug 'editorconfig/editorconfig-vim'
-
-
-" VueJS
-Plug 'leafOfTree/vim-vue-plugin'
-
 
 " Better developer Experience
 
@@ -176,8 +171,7 @@ Plug 'mhinz/vim-startify'
 
 " TEST: Plugins beings tested
 Plug 'preservim/vimux' " Vim Integration with Tmux (good, automatic miniwindows)
-Plug 'tpope/vim-dispatch' " Great for asyncronous execution of things
-
+"Plug 'tpope/vim-dispatch' " Great for asyncronous execution of things
 call plug#end()
 
 
