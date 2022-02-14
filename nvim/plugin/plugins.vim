@@ -37,11 +37,11 @@ Plug 'sainnhe/gruvbox-material'
 " Navigation
 
 "" Fonts Icons for the file explorer
-Plug 'lambdalisue/nerdfont.vim'
+"Plug 'lambdalisue/nerdfont.vim'
 
 "" Nvim Tree
 Plug 'kyazdani42/nvim-tree.lua'
-Plug 'kyazdani42/nvim-web-devicons' " for file icons
+"Plug 'kyazdani42/nvim-web-devicons' " for file icons
 
 "" Telescope NVIM
 Plug 'nvim-lua/popup.nvim'
