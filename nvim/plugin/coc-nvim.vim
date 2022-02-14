@@ -14,6 +14,7 @@ let g:coc_global_extensions = [
     \ 'coc-react-refactor',
     \ 'coc-snippets',
     \ 'coc-tailwindcss',
+    \ 'coc-tabnine',
     \ 'coc-tsserver',
     \ 'coc-vimlsp',
     \ 'coc-yaml',
