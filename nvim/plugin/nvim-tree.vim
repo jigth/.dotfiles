@@ -2,6 +2,29 @@ nnoremap <leader>e :NvimTreeToggle<CR>
 nnoremap <leader>r :NvimTreeRefresh<CR>
 nnoremap <leader>n :NvimTreeFindFile<CR>
 
+" Config variables for Icons (nvim-web-devicons)
+"
+let g:nvim_tree_show_icons = {
+    \ 'git': 1,
+    \ 'folders': 1,
+    \ 'files': 1,
+    \ 'folder_arrows': 1,
+    \ }
+
+let g:nvim_tree_icons = {
+    \ 'default': '🗎',
+    \ 'git': {
+    \   'unstaged': "✗",
+    \   'staged': "✓",
+    \   'unmerged': "",
+    \   'renamed': "R",
+    \   'untracked': "★",
+    \   'deleted': "D",
+    \   'ignored': "◌"
+    \   }
+    \ }
+
+
 lua << EOL
 local tree_cb = require'nvim-tree.config'.nvim_tree_callback
 

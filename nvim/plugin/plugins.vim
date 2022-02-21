@@ -36,9 +36,6 @@ Plug 'sainnhe/gruvbox-material'
 
 " Navigation
 
-"" Fonts Icons for the file explorer
-"Plug 'lambdalisue/nerdfont.vim'
-
 "" Nvim Tree
 Plug 'kyazdani42/nvim-tree.lua'
 "Plug 'kyazdani42/nvim-web-devicons' " for file icons
@@ -116,6 +113,10 @@ Plug 'maxmellon/vim-jsx-pretty'
 Plug 'hashivim/vim-terraform'
 
 
+" VueJS
+Plug 'posva/vim-vue'
+
+
 " Snippets
 Plug 'honza/vim-snippets'
 Plug 'SirVer/ultisnips'
@@ -172,6 +173,10 @@ Plug 'mhinz/vim-startify'
 " TEST: Plugins beings tested
 Plug 'preservim/vimux' " Vim Integration with Tmux (good, automatic miniwindows)
 "Plug 'tpope/vim-dispatch' " Great for asyncronous execution of things
+
+
+" Explorer Icons
+Plug 'kyazdani42/nvim-web-devicons'
 call plug#end()
 
 

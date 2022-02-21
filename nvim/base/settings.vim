@@ -63,7 +63,6 @@ set expandtab
 "set smartindent
 filetype plugin indent on " Smart indentation (replaces 'smartindent' option)
 set autoindent
-set smartindent
 
 
 " Mouse support (Except on insert mode because its uncomfortable on laptops)
