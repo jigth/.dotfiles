@@ -12,7 +12,7 @@ let g:nvim_tree_show_icons = {
     \ }
 
 let g:nvim_tree_icons = {
-    \ 'default': '🗎',
+    \ 'default': '',
     \ 'git': {
     \   'unstaged': "✗",
     \   'staged': "✓",
