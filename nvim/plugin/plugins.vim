@@ -6,27 +6,15 @@ call plug#begin(stdpath('data') . '/plugged')
 Plug 'sainnhe/sonokai' " I like this one *A LOT*, but lacks some syntax coloring in JSON objects
 Plug 'kaicataldo/material.vim' " Bright code, light colored commentaries, better syntax colors for JSON objects than 'sonokai'
 
-""" Not bad
-Plug 'drewtempelmeyer/palenight.vim' " Good enough, But I like the 'sonokai' and 'material' a bit more
-Plug 'dracula/vim' " Very bright contrast except for comments
-
 "" Medium contrast (Good with more moderate environment light)
 """ Nice ones
-Plug 'sainnhe/edge' " Like the good 'sonokai' theme, but the non-commented code is a bit less bright
 Plug 'rakr/vim-one'
 
 """ Light colored commentaries
-Plug 'ghifarit53/tokyonight-vim'
 Plug 'joshdick/onedark.vim'
-Plug 'ayu-theme/ayu-vim' " Miriage variant is good
-Plug 'kabbamine/yowish.vim'
-Plug 'preservim/vim-colors-pencil' " Nice light variation (when using background=light)
 
 """ Medium contrast but some annoying bright colors
 Plug 'morhetz/gruvbox' " Annoying GREEN and red
-
-""" Very visible comments (annoying, maybe useful for a specific use case)
-Plug 'tomasiser/vim-code-dark' " Similar to VSCode, mostly used to follow VSCode tutorials seamlessly
 
 "" Low contrast (Maybe best for low light environments)
 """ Nice ones
@@ -37,8 +25,9 @@ Plug 'sainnhe/gruvbox-material'
 " Navigation
 
 "" Nvim Tree
-Plug 'kyazdani42/nvim-tree.lua'
+"Plug 'kyazdani42/nvim-tree.lua'
 "Plug 'kyazdani42/nvim-web-devicons' " for file icons
+Plug 'ms-jpq/chadtree'
 
 "" Telescope NVIM
 Plug 'nvim-lua/popup.nvim'
@@ -99,9 +88,9 @@ Plug 'majutsushi/tagbar'
 Plug 'metakirby5/codi.vim'
 
 
-" Neovim Tree Sitter 
-Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
-Plug 'nvim-treesitter/playground'
+" Neovim Tree Sitter (Syntax coloring)
+"Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+"Plug 'nvim-treesitter/playground'
 
 
 " Highlighting
@@ -112,21 +101,30 @@ Plug 'HerringtonDarkholme/yats.vim' " Better TypeScript highlighting (especially
 Plug 'maxmellon/vim-jsx-pretty'
 Plug 'hashivim/vim-terraform'
 
-
-" VueJS
+" VueJS Support (syntax highlighting and a bit more)
 Plug 'posva/vim-vue'
 
+" Tailwind support
+Plug 'rodrigore/coc-tailwind-intellisense', {'do': 'npm install'}
+
+" Svelte Support
+Plug 'othree/html5.vim'
+Plug 'evanleck/vim-svelte'
+Plug 'pangloss/vim-javascript'
+Plug 'HerringtonDarkholme/yats.vim'
+Plug 'Shougo/context_filetype.vim'
 
 " Snippets
 Plug 'honza/vim-snippets'
-Plug 'SirVer/ultisnips'
-Plug 'quangnguyen30192/cmp-nvim-ultisnips'
+"Plug 'SirVer/ultisnips'
+"Plug 'quangnguyen30192/cmp-nvim-ultisnips'
 
 
 " Text editing productivity
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-commentary'
+Plug 'preservim/nerdcommenter'
 Plug 'tpope/vim-unimpaired'
 Plug 'tpope/vim-abolish' " Better substitution, abbreviation and text-changing operations
 Plug 'mg979/vim-visual-multi', {'branch': 'master'}
@@ -140,7 +138,7 @@ Plug 'vim-test/vim-test'
 
 
 " Debugging
-Plug 'puremourning/vimspector'
+"Plug 'puremourning/vimspector'
 Plug 'mfussenegger/nvim-dap'
 
 " Formating
@@ -169,17 +167,17 @@ Plug 'skanehira/preview-markdown.vim' " Similar to the previous one but runs wit
 " Welcome Screen
 Plug 'mhinz/vim-startify'
 
+" Tmux integration(good, automatic miniwindows)
+Plug 'preservim/vimux'
 
 " TEST: Plugins beings tested
-Plug 'preservim/vimux' " Vim Integration with Tmux (good, automatic miniwindows)
 "Plug 'tpope/vim-dispatch' " Great for asyncronous execution of things
 
 
 " Explorer Icons
 Plug 'kyazdani42/nvim-web-devicons'
+
 call plug#end()
-
-
 
 " Transparent sign column for the used theme
 highlight SignColumn guibg=none

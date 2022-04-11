@@ -1,5 +1,5 @@
-" by default with Neovim. 
 " NOTE: Some configurations in this file are put explicitly although they come
+" by default with Neovim. 
 " That's just me following the principle "Explicit is better than implicit"
 
 
@@ -87,7 +87,8 @@ set nowrap
 "set colorcolumn=80 " Visual column at the caracter 80 (commented out cuz' I
 "don't like it that much)
 set signcolumn=yes  " Helper column for status messages
-set cmdheight=2  " A little bit more space to show commands' responses
+"set cmdheight=2  " A little bit more space to show commands' responses
+set cmdheight=1  " Less space for commands, more space for code! I'm just testing this out.
 set guicursor= " Let the cursor be always a block
 set numberwidth=1
 
@@ -104,14 +105,10 @@ set completeopt=menuone,noinsert,noselect
 "" Syntax Highlighting
 autocmd BufNewFile,BufRead *.env* set syntax=sh
 autocmd BufNewFile,BufRead *.ejs set filetype=html
-autocmd! BufNewFile,BufRead *.svelte set ft=html
 autocmd! BufNewFile,BufRead *.njk set ft=jinja "" Requires the PLUGIN 'glench/vim-jinja2-syntax'
 
 "" Changes the window-local current directory to be the same as the directory of the current file
 autocmd VimEnter * silent! lcd %:p:h
-
-"" Autosave
-autocmd CursorHoldI,CursorHold <buffer> silent :wall
 
 
 " Filetypes
@@ -122,3 +119,37 @@ filetype plugin on
 let g:netrw_dirhistmax=0 " Avoid creating .netrwhist history file
 let g:python3_host_prog = '/usr/bin/python3' " Python language provider
 let g:tex_flavor = 'latex' " Recognize Latex markup language
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+" Svelte config test
+if !exists('g:context_filetype#same_filetypes')
+  let g:context_filetype#filetypes = {}
+endif
+
+let g:context_filetype#filetypes.svelte =
+\ [
+\   {'filetype' : 'javascript', 'start' : '<script>', 'end' : '</script>'},
+\   {
+\     'filetype': 'typescript',
+\     'start': '<script\%( [^>]*\)\? \%(ts\|lang="\%(ts\|typescript\)"\)\%( [^>]*\)\?>',
+\     'end': '',
+\   },
+\   {'filetype' : 'css', 'start' : '<style \?.*>', 'end' : '</style>'},
+\ ]
+
+let g:ft = ''

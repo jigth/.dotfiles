@@ -4,6 +4,7 @@
 let g:coc_global_extensions = [
     \ '@yaegassy/coc-volar',
     \ 'coc-css',
+    \ 'coc-svelte',
     \ 'coc-docker',
     \ 'coc-emmet',
     \ 'coc-html',
@@ -13,8 +14,6 @@ let g:coc_global_extensions = [
     \ 'coc-pyright',
     \ 'coc-react-refactor',
     \ 'coc-snippets',
-    \ 'coc-tailwindcss',
-    \ 'coc-tabnine',
     \ 'coc-tsserver',
     \ 'coc-vimlsp',
     \ 'coc-yaml',
