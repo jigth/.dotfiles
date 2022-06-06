@@ -27,7 +27,9 @@ Plug 'sainnhe/gruvbox-material'
 "" Nvim Tree
 "Plug 'kyazdani42/nvim-tree.lua'
 "Plug 'kyazdani42/nvim-web-devicons' " for file icons
-Plug 'ms-jpq/chadtree'
+Plug 'preservim/nerdtree'
+Plug 'ryanoasis/vim-devicons'
+"Plug 'ms-jpq/chadtree', {'branch': 'chad', 'do': 'python3 -m chadtree deps'}
 
 "" Telescope NVIM
 Plug 'nvim-lua/popup.nvim'
@@ -172,10 +174,6 @@ Plug 'preservim/vimux'
 
 " TEST: Plugins beings tested
 "Plug 'tpope/vim-dispatch' " Great for asyncronous execution of things
-
-
-" Explorer Icons
-Plug 'kyazdani42/nvim-web-devicons'
 
 call plug#end()
 

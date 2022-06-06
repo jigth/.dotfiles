@@ -63,10 +63,6 @@ nnoremap Y y$
 "" Move text lines/regions up and down easily
 vnoremap J :m '>+1<CR>gv=gv
 vnoremap K :m '<-2<CR>gv=gv
-"inoremap <C-j> <esc>:m .+1<CR>==
-"inoremap <C-k> <esc>:m .-2<CR>==
-nnoremap <leader>j :m .+1<CR>==
-nnoremap <leader>k :m .-2<CR>==
 
 "" Keeping text searches 'n' and 'N' and line joining 'J' centered when pressing 'n', 'N' or 'J'
 nnoremap n nzzzv
@@ -83,3 +79,7 @@ nnoremap <leader>t <C-w>v<c-w>l:term<CR>i
 " Map jj to Escape key, pressing jj twice very fast in insert mode will go to
 " normal mode
 imap jj <esc>
+
+" Tree explorer (Nerdtree, Ex, Chadtree, NvimTree, or any other kind of tree)
+"nnoremap <leader>v :CHADopen <CR>
+nnoremap <leader>v :NERDTreeToggle <CR>
