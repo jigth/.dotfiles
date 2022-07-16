@@ -68,18 +68,22 @@ Plug 'mattn/emmet-vim'
 " LSP Neovim
 
 "" Basic config
-"Plug 'neovim/nvim-lspconfig'
+Plug 'neovim/nvim-lspconfig'
 "Plug 'glepnir/lspsaga.nvim'
 
 "" CoC autocompletion
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
+"Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 "" cmp nvim (autocompletition)
-"Plug 'hrsh7th/cmp-nvim-lsp'
-"Plug 'hrsh7th/cmp-buffer'
+Plug 'hrsh7th/cmp-nvim-lsp'
+Plug 'hrsh7th/cmp-buffer'
 Plug 'hrsh7th/cmp-path'
 Plug 'hrsh7th/cmp-cmdline'
 Plug 'hrsh7th/nvim-cmp'
+
+" For luasnip users.
+Plug 'L3MON4D3/LuaSnip'
+Plug 'saadparwaiz1/cmp_luasnip'
 
 "" Pretty icons (for LSP)
 "Plug 'onsails/lspkind-nvim'
@@ -105,9 +109,6 @@ Plug 'hashivim/vim-terraform'
 
 " VueJS Support (syntax highlighting and a bit more)
 Plug 'posva/vim-vue'
-
-" Tailwind support
-Plug 'rodrigore/coc-tailwind-intellisense', {'do': 'npm install'}
 
 " Svelte Support
 Plug 'othree/html5.vim'
