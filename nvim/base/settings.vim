@@ -49,7 +49,7 @@ set backupcopy=yes  " Allow to do live reload or HMR in VIM / Neovim
 set linebreak  " Avoid wrapping a line in the middle of a word
 set nohlsearch
 set scrolloff=3  " Help to see 3 more lines when the coursor is at the bottom or at the top
-set sidescrolloff=5  " Keep some columns to the left and right of the cursor when reaching screen width limits
+"set sidescrolloff=5  " Keep some columns to the left and right of the cursor when reaching screen width limits
 set confirm  " Display confirmation dialog if closing unsaved file
 
 
@@ -98,7 +98,8 @@ set termguicolors
 
 
 " Intellisense autocompletion menu options
-set completeopt=menuone,noinsert,noselect
+" set completeopt=menuone,noinsert,noselect
+set completeopt=menu,menuone,noselect " Recommended by nvim-cmp
 
 
 " Autocommands
