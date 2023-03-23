@@ -4,7 +4,6 @@ source ~/.config/nvim/base/remaps.vim
 source ~/.config/nvim/plugin/plugins.vim
 source ~/.config/nvim/themes/material.vim
 source ~/.config/nvim/themes/gruvbox-material.vim
-"colorscheme sonokai
 colorscheme onedark
 
 " Lua Config

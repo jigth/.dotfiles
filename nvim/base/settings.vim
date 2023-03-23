@@ -41,7 +41,7 @@ set wildignore+=**/.git/*
 " UI Settings
 set laststatus=2  " Allow status bar to show up (comes activated by default in Neovim but not Vim)
 set ruler
-set cursorline
+" set cursorline  " Commented out because it was producing some conflicts with syntax highlighting using specific vim plugins/extensions
 
 
 " UX, DX Settings
@@ -104,7 +104,7 @@ set completeopt=menu,menuone,noselect " Recommended by nvim-cmp
 
 " Autocommands
 "" Syntax Highlighting
-autocmd BufNewFile,BufRead *.env* set syntax=sh
+autocmd BufNewFile,BufRead *.env* set filetype=bash
 autocmd BufNewFile,BufRead *.ejs set filetype=html
 autocmd! BufNewFile,BufRead *.njk set ft=jinja "" Requires the PLUGIN 'glench/vim-jinja2-syntax'
 
@@ -121,36 +121,3 @@ let g:netrw_dirhistmax=0 " Avoid creating .netrwhist history file
 let g:python3_host_prog = '/usr/bin/python3' " Python language provider
 let g:tex_flavor = 'latex' " Recognize Latex markup language
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-" Svelte config test
-if !exists('g:context_filetype#same_filetypes')
-  let g:context_filetype#filetypes = {}
-endif
-
-let g:context_filetype#filetypes.svelte =
-\ [
-\   {'filetype' : 'javascript', 'start' : '<script>', 'end' : '</script>'},
-\   {
-\     'filetype': 'typescript',
-\     'start': '<script\%( [^>]*\)\? \%(ts\|lang="\%(ts\|typescript\)"\)\%( [^>]*\)\?>',
-\     'end': '',
-\   },
-\   {'filetype' : 'css', 'start' : '<style \?.*>', 'end' : '</style>'},
-\ ]
-
-let g:ft = ''
