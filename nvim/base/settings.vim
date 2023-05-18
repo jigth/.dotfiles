@@ -2,9 +2,34 @@
 " by default with Neovim. 
 " That's just me following the principle "Explicit is better than implicit"
 
+" Settings that improve the speed of Neovim with plugins.
+set timeoutlen=1000
+set ttimeoutlen=0
 
 " Leave this on top as it affects other options
 set nocompatible
+
+
+" Experimental function to close all hidden buffers (taken from Stackoverflow)
+function! CloseHiddenBuffers()
+    " >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+    " close any buffers hidden
+    " <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+    let open_buffers = []
+
+    for i in range(tabpagenr('$'))
+        call extend(open_buffers, tabpagebuflist(i + 1))
+    endfor
+
+    for num in range(1, bufnr("$") + 1)
+        if buflisted(num) && index(open_buffers, num) == -1
+            exec "bdelete ".num
+        endif
+    endfor
+endfunction
+
+au BufEnter * call CloseHiddenBuffers()
+
 
 
 " General configs (some of these were taken from 'Mastering Vim Quickly)
@@ -105,6 +130,7 @@ set completeopt=menu,menuone,noselect " Recommended by nvim-cmp
 " Autocommands
 "" Syntax Highlighting
 autocmd BufNewFile,BufRead *.env* set filetype=bash
+autocmd BufNewFile,BufRead *.gs set filetype=javascript "" For GoogleScript files.
 autocmd BufNewFile,BufRead *.ejs set filetype=html
 autocmd! BufNewFile,BufRead *.njk set ft=jinja "" Requires the PLUGIN 'glench/vim-jinja2-syntax'
 

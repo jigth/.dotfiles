@@ -83,3 +83,8 @@ imap jj <esc>
 " Tree explorer (Nerdtree, Ex, Chadtree, NvimTree, or any other kind of tree)
 "nnoremap <leader>v :CHADopen <CR>
 nnoremap <leader>v :NERDTreeToggle <CR>
+
+
+" Git Keybindings (May depend on Git plugin integrations for Neovim like
+" "Fugitive"
+nnoremap <leader>gp :Git push <CR>
