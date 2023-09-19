@@ -7,4 +7,4 @@ source ~/.config/nvim/themes/gruvbox-material.vim
 colorscheme onedark
 
 " Lua Config
-luafile ~/.config/nvim/lua/jigth/init.lua
+"luafile ~/.config/nvim/lua/jigth/init.lua
