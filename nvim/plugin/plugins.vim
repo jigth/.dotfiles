@@ -5,6 +5,7 @@ call plug#begin(stdpath('data') . '/plugged')
 """ Nice ones
 Plug 'sainnhe/sonokai' " I like this one *A LOT*, but lacks some syntax coloring in JSON objects
 Plug 'kaicataldo/material.vim' " Bright code, light colored commentaries, better syntax colors for JSON objects than 'sonokai'
+Plug 'catppuccin/nvim', { 'as': 'catppuccin' }
 
 "" Medium contrast (Good with more moderate environment light)
 """ Nice ones

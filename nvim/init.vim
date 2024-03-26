@@ -4,7 +4,7 @@ source ~/.config/nvim/base/remaps.vim
 source ~/.config/nvim/plugin/plugins.vim
 source ~/.config/nvim/themes/material.vim
 source ~/.config/nvim/themes/gruvbox-material.vim
-colorscheme onedark
+colorscheme catppuccin
 
 " Lua Config
 "luafile ~/.config/nvim/lua/jigth/init.lua
